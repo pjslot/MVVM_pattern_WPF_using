@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<string>&lt;Books&gt;
+  &lt;Book&gt;
+    &lt;Title&gt;121212&lt;/Title&gt;
+    &lt;Author&gt;wdwd&lt;/Author&gt;
+    &lt;Publisher&gt;cxcxdc&lt;/Publisher&gt;
+    &lt;Year&gt;121212&lt;/Year&gt;
+  &lt;/Book&gt;
+  &lt;Book&gt;
+    &lt;Title&gt;WPF Unleashed&lt;/Title&gt;
+    &lt;Author&gt;Adam Natan&lt;/Author&gt;
+    &lt;Publisher&gt;Apub&lt;/Publisher&gt;
+    &lt;Year&gt;2012&lt;/Year&gt;
+  &lt;/Book&gt;
+  &lt;Book&gt;
+    &lt;Title&gt;F# for Machine Learning&lt;/Title&gt;
+    &lt;Author&gt;Sudipta Mukherjee&lt;/Author&gt;
+    &lt;Publisher&gt;Bpub&lt;/Publisher&gt;
+    &lt;Year&gt;2016&lt;/Year&gt;
+  &lt;/Book&gt;
+  &lt;Book&gt;
+    &lt;Title&gt;F# for Fun and Profit&lt;/Title&gt;
+    &lt;Author&gt;Scott Wlaschin&lt;/Author&gt;
+    &lt;Publisher&gt;Cpub&lt;/Publisher&gt;
+    &lt;Year&gt;2015&lt;/Year&gt;
+  &lt;/Book&gt;
+  &lt;Book&gt;
+    &lt;Title&gt;Learning C# by Developing Games with Unity 3D&lt;/Title&gt;
+    &lt;Author&gt;Terry Norton&lt;/Author&gt;
+    &lt;Publisher&gt;Dpub&lt;/Publisher&gt;
+    &lt;Year&gt;2013&lt;/Year&gt;
+  &lt;/Book&gt;
+&lt;/Books&gt;</string>

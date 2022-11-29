@@ -1,0 +1,16 @@
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\bin\Debug\MVVM_pattern_WPF_using.exe.config
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\bin\Debug\MVVM_pattern_WPF_using.exe
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\bin\Debug\MVVM_pattern_WPF_using.pdb
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\obj\Debug\MVVM_pattern_WPF_using.csproj.AssemblyReference.cache
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\obj\Debug\MVVM_pattern_WPF_using.csproj.SuggestedBindingRedirects.cache
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\obj\Debug\MainWindow.g.cs
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\obj\Debug\App.g.cs
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\obj\Debug\MVVM_pattern_WPF_using_MarkupCompile.cache
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\obj\Debug\MVVM_pattern_WPF_using_MarkupCompile.lref
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\obj\Debug\MainWindow.baml
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\obj\Debug\MVVM_pattern_WPF_using.g.resources
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\obj\Debug\MVVM_pattern_WPF_using.Properties.Resources.resources
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\obj\Debug\MVVM_pattern_WPF_using.csproj.GenerateResource.cache
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\obj\Debug\MVVM_pattern_WPF_using.csproj.CoreCompileInputs.cache
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\obj\Debug\MVVM_pattern_WPF_using.exe
+D:\Users\Dan\241122_practiceMVVM\MVVM_pattern_WPF_using\MVVM_pattern_WPF_using\obj\Debug\MVVM_pattern_WPF_using.pdb
