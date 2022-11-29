@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVM_pattern_WPF_using"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MVVM Pattern Worker v1.0 - Kabluchkov D.S." Height="450" Width="800">
     <Border BorderBrush="#FF00FF04" BorderThickness="1">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -24,12 +24,13 @@
                     </Style>
                     </StackPanel.Resources>
                     <Button Command="{Binding AddCommand}">+</Button>
-                    <Button Command="{Binding DelCommand}" CommandParameter="{Binding SelectedBook}">-</Button>
+                    <Button x:Name="minusButton" Command="{Binding DelCommand}" CommandParameter="{Binding SelectedBook}" IsEnabled="False">-</Button>
                     <Button Command="{Binding SaveCommand}">Save</Button>
                     <Button Command="{Binding OpenCommand}">Open</Button>
-            </StackPanel>
+                    <Button Command="{Binding CleanCommand}">Clean</Button>
+                </StackPanel>
 
-            <ListBox Grid.Column="0" ItemsSource="{Binding Books}" SelectedItem="{Binding SelectedBook}">
+            <ListBox Grid.Column="0" ItemsSource="{Binding Books}" SelectedItem="{Binding SelectedBook}" GotFocus="ListBox_GotFocus">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="5">

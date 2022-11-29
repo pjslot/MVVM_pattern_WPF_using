@@ -1,12 +1,6 @@
 <?xml version="1.0"?>
 <string>&lt;Books&gt;
   &lt;Book&gt;
-    &lt;Title&gt;121212&lt;/Title&gt;
-    &lt;Author&gt;wdwd&lt;/Author&gt;
-    &lt;Publisher&gt;cxcxdc&lt;/Publisher&gt;
-    &lt;Year&gt;121212&lt;/Year&gt;
-  &lt;/Book&gt;
-  &lt;Book&gt;
     &lt;Title&gt;WPF Unleashed&lt;/Title&gt;
     &lt;Author&gt;Adam Natan&lt;/Author&gt;
     &lt;Publisher&gt;Apub&lt;/Publisher&gt;

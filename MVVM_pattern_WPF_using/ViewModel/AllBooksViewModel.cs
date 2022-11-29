@@ -30,6 +30,7 @@ namespace MVVM_pattern_WPF_using.ViewModel
         private BaseCommand delCommand;
         private BaseCommand saveCommand;
         private BaseCommand openCommand;
+        private BaseCommand cleanCommand;
 
         //свойства класса
         public Book SelectedBook
@@ -53,8 +54,6 @@ namespace MVVM_pattern_WPF_using.ViewModel
                 }));
             }
         }
-
-        //++++++подумать на счёт кнопки удаления+++++
         
         //обработчик команды удаления книги
         public BaseCommand DelCommand
@@ -103,58 +102,90 @@ namespace MVVM_pattern_WPF_using.ViewModel
                                 ));
                         string s = x.ToString();
 
-
                         Stream sr = new FileStream("books.xml", FileMode.Create);
                         XmlSerializer xmlSer = new XmlSerializer(typeof(string));
                         xmlSer.Serialize(sr, s);
                         sr.Close();
-
-
+                        
+                        //УСПЕХ СОХРАНЕНИЯ!
                     };
-
                     saveCommand = new BaseCommand(Execute);
                     return saveCommand;
                 }
-
             }
         }
-
-
-
 
         //обработчик команды открытия списка книг
         public BaseCommand OpenCommand
         {
             get
             {
-                if (saveCommand != null)
-                    return saveCommand;
+                if (openCommand != null)
+                    return openCommand;
                 else
                 {
 
                     Action<object> Execute = o =>
                     {
-                        //десереализация XML
-                        Stream sr = new FileStream("books.xml", FileMode.Open);
-                        XmlSerializer xmlSer = new XmlSerializer(typeof(string));
-                        string s = (string)xmlSer.Deserialize(sr);
-                        sr.Close();
+                        //если файла нету
+                        if (!(File.Exists("books.xml")))
+                        {
+                            //АЛЯРМ! провал загрузки
+                        } else
+                        {
 
-                var x = XElement.Parse(s);
-                var q = from e in x.Elements()
-                select new Book(e.Element("Title").Value, e.Element("Author").Value);
- //!!!!!!!!!!                       //добавить конструктор!
+                            //десереализация XML
+                            Stream sr = new FileStream("books.xml", FileMode.Open);
+                            XmlSerializer xmlSer = new XmlSerializer(typeof(string));
+                            string s = (string)xmlSer.Deserialize(sr);
+                            sr.Close();
 
+                             //построение Xml-дерева
+                             var x = XElement.Parse(s);
+
+                            //последовательная обработка элементов в коллекции Elements
+                            var q = from e in x.Elements()
+                            select new Book(e.Element("Title").Value, e.Element("Author").Value, e.Element("Publisher").Value, e.Element("Year").Value);
+                    
+                            //запись книг в лист
+                            int i = 0;
+                             foreach (var boo in q)
+                            {
+                                Books.Insert(i, boo);
+                                SelectedBook = boo;
+                                i++;
+                            }
+
+                             //УСПЕХ ЗАГРУЗКИ!
+                       }
                     };
 
                     openCommand = new BaseCommand(Execute);
                     return openCommand;
                 }
-
             }
         }
 
+        //обработчик команды очистки списка книг
+        public BaseCommand CleanCommand
+        {
+            get
+            {
+                if (cleanCommand != null)
+                    return cleanCommand;
+                else
+                {
 
+                    Action<object> Execute = o =>
+                    {
+                        Books.Clear();                        
+                    };
+
+                    cleanCommand = new BaseCommand(Execute);
+                    return cleanCommand;
+                }
+            }
+        }
 
 
         //конструктор

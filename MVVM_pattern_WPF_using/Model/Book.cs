@@ -48,5 +48,16 @@ namespace MVVM_pattern_WPF_using.Model
             set { year = value; OnPropertyChanged("Year"); }
         }
 
+        //конструкторы
+
+        public Book() { }
+        public Book(string Title, string Author, string Publisher, string Year)
+        {
+            this.title = Title;
+            this.author = Author;
+            this.publisher = Publisher;
+            this.year = Year;
+        }
+
     }
 }

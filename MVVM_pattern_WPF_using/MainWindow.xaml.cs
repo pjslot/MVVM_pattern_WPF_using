@@ -26,7 +26,10 @@ namespace MVVM_pattern_WPF_using
             InitializeComponent();
             DataContext = new AllBooksViewModel();
         }
-        
-        
+
+        private void ListBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            minusButton.IsEnabled = true;
+        }
     }
 }
