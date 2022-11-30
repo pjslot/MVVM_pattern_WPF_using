@@ -10,7 +10,7 @@ using System.Xml.Linq;
 using System.IO;
 using System.Text;
 using System.Xml.Serialization;
-
+using System.Windows;
 
 namespace MVVM_pattern_WPF_using.ViewModel
 {
@@ -106,8 +106,12 @@ namespace MVVM_pattern_WPF_using.ViewModel
                         XmlSerializer xmlSer = new XmlSerializer(typeof(string));
                         xmlSer.Serialize(sr, s);
                         sr.Close();
-                        
+
                         //УСПЕХ СОХРАНЕНИЯ!
+                        MessageBoxResult result = System.Windows.MessageBox.Show("Файл XML сохранён в корневую папку.",
+                                        "Успех!",
+                                        MessageBoxButton.OK,
+                                        MessageBoxImage.Information);
                     };
                     saveCommand = new BaseCommand(Execute);
                     return saveCommand;
@@ -131,6 +135,10 @@ namespace MVVM_pattern_WPF_using.ViewModel
                         if (!(File.Exists("books.xml")))
                         {
                             //АЛЯРМ! провал загрузки
+                            MessageBoxResult result = System.Windows.MessageBox.Show("Не найден файл для загрузки!",
+                                          "Положите файл XML в корневую папку",
+                                          MessageBoxButton.OK,
+                                          MessageBoxImage.Information);
                         } else
                         {
 
@@ -156,8 +164,12 @@ namespace MVVM_pattern_WPF_using.ViewModel
                                 i++;
                             }
 
-                             //УСПЕХ ЗАГРУЗКИ!
-                       }
+                            //УСПЕХ ЗАГРУЗКИ!
+                            MessageBoxResult result = System.Windows.MessageBox.Show("Файл XML загружен.",
+                                         "Успех!",
+                                         MessageBoxButton.OK,
+                                         MessageBoxImage.Information);
+                        }
                     };
 
                     openCommand = new BaseCommand(Execute);
